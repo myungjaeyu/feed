@@ -7,13 +7,11 @@ interface ITabProps {
 
 const Tab = styled.article`
     ${({ tabsCount }: ITabProps) => `
-    button {
-        appearance: none;
-        padding: 1rem;
-        outline: none;
+
+    a {
         border: 1px solid rgb(232, 235, 237);
-        background-color: #f7f8fa;
-        color: #cdced1;
+        display: inline-block;
+        overflow: hidden;
 
         ${
             tabsCount > 1
@@ -31,6 +29,16 @@ const Tab = styled.article`
                 border-radius: 8px;
             `
         }
+
+    }
+
+    button {
+        appearance: none;
+        padding: 1rem;
+        outline: none;
+        border: 0;
+        background-color: #f7f8fa;
+        color: #cdced1;
 
         &.selected {
             background-color: #fff;
