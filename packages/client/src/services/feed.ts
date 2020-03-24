@@ -1,11 +1,11 @@
 import requset from '@commons/request'
 
-export const getProducts = async (key: string) =>
-    requset(`/api/feed/products?key=${key}`, {
+export const getProducts = async (uri: string) =>
+    requset(`/api/feed/products?uri=${uri}`, {
         method: 'GET'
     })
 
-export const getRank = async (key: string) =>
-    requset(`/api/feed/ranks?key=${key}`, {
+export const getRank = async (uri: string) =>
+    requset(`/api/feed/ranks?uri=${uri}`, {
         method: 'GET'
     })
