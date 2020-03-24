@@ -1,5 +1,6 @@
 import React from 'react'
 import { useMount } from 'react-use'
+import { useBottomScrollListener } from 'react-bottom-scroll-listener'
 
 import AppContainer from '@containers/app'
 
@@ -18,6 +19,11 @@ const Ranking = ({}: IRankProps) => {
     useMount( async () => {
 
         await app.getRanksAsync()
+    })
+
+    useBottomScrollListener( async () => {
+
+        await app.addRanksAsync()
     })
 
     return (
