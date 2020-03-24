@@ -20,9 +20,12 @@ function useApp(): IAppState {
 
         let response: any = { data: [], pagication: {} }
 
-        if (!products.length) response = await getProducts(productsPaginationNext)
+        if (products.length) return
 
-        setProducts([...!products.length ? response.data : products])
+        response = await getProducts(productsPaginationNext)
+
+        setProductssPagenationNext(response.pagination.next)
+        setProducts(response.data)
 
         return true
     }
@@ -31,19 +34,59 @@ function useApp(): IAppState {
 
         let response: any = { data: [], pagication: {} }
 
-        if (!ranks.length) response = await getRank(ranksPaginationNext)
+        if (ranks.length) return
 
-        setRanks([...(!ranks.length ? response.data : ranks)])
+        response = await getRank(ranksPaginationNext)
+
+        setRanksPagenationNext(response.pagination.next)
+        setRanks(response.data)
 
         return true
     }
+
+
+    const addProductsAsync = async (): Promise<boolean> => {
+
+        let response: any = { data: [], pagication: {} }
+
+        if (!productsPaginationNext || pending) return
+
+        setPending(true)
+
+        response = await getProducts(productsPaginationNext)
+
+        setProductssPagenationNext(response.pagination.next)
+        setProducts([...products, ...response.data])
+        setPending(false)
+
+        return true
+    }
+
+    const addRanksAsync = async (): Promise<boolean> => {
+
+        let response: any = { data: [], pagication: {} }
+
+        if (!ranksPaginationNext || pending) return
+
+        setPending(true)
+
+        response = await getRank(ranksPaginationNext)
+
+        setRanksPagenationNext(response.pagination.next)
+        setRanks([...ranks, ...response.data])
+        setPending(false)
+
+        return true
+    }    
 
     return {
         products,
         ranks,
         pending,
         getProductsAsync,
-        getRanksAsync
+        getRanksAsync,
+        addProductsAsync,
+        addRanksAsync
     }
 }
 

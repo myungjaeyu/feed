@@ -7,6 +7,8 @@ interface IAppState {
     ranks: IRank[]
     getProductsAsync: () => Promise<boolean>
     getRanksAsync: () => Promise<boolean>
+    addProductsAsync: () => Promise<boolean>
+    addRanksAsync: () => Promise<boolean>
 }
 
 export default IAppState
