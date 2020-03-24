@@ -6,18 +6,18 @@ const feed: Router = Router()
 
 feed.get('/products', async (req: Request, res: Response) => {
 
-    const { key } = req.query
+    const { uri } = req.query
 
-    const result = await getProducts(key)
+    const result = await getProducts(uri)
 
     res.json(result)
 })
 
 feed.get('/ranks', async (req: Request, res: Response) => {
 
-    const { key } = req.query
+    const { uri } = req.query
 
-    const result = await getRanks(key)
+    const result = await getRanks(uri)
 
     res.json(result)
 })
