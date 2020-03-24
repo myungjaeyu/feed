@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import Layout from '@components/Layout'
+
+import { Tile, TilesTemplate } from 'design-system'
 
 interface IHomeProps {}
 
@@ -9,11 +11,16 @@ const Home = ({}: IHomeProps) => {
     return (
         <Layout>
 
-            <Fragment>
+            <TilesTemplate>
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+                <Tile image='https://usercontents-c.styleshare.kr/images/41316547/original' price='15,000원' />
+            </TilesTemplate>
 
-                <h1>Home</h1>
-
-            </Fragment>
         </Layout>
     )
 }
