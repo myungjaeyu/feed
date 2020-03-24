@@ -1,7 +1,8 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from '@emotion/styled'
 
-const StyledNavLink = styled(NavLink)`
+const sharedStyle = `
     text-decoration: none;
     color: initial;
     &:focus,
@@ -12,5 +13,7 @@ const StyledNavLink = styled(NavLink)`
         text-decoration: none;
     }
 `
+const StyledNavLink = styled(NavLink)`${sharedStyle}`
+const StyledHref = styled.a`${sharedStyle}`
 
-export default StyledNavLink
+export default (props) => !props.href ? <StyledNavLink {...props} /> : <StyledHref { ...props } />
