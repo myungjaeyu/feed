@@ -20,7 +20,7 @@ module.exports = merge(base, {
         open: true,
         historyApiFallback: true,
         proxy: [{
-            context: ['/auth', '/api'],
+            context: ['/api'],
             target: 'http://localhost:3001',
         }]
     }
