@@ -47,6 +47,7 @@ const Content = styled.div`
     align-items: center;
 
     h5 {
+        color: #26282b;
         font-weight: 700;
     }
 
