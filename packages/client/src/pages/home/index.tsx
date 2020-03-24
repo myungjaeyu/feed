@@ -5,7 +5,7 @@ import AppContainer from '@containers/app'
 
 import Layout from '@components/Layout'
 
-import { Tile, TilesTemplate } from 'design-system'
+import { Loader, Tile, TilesTemplate } from 'design-system'
 
 import Link from '@components/Link'
 
@@ -34,6 +34,8 @@ const Home = ({}: IHomeProps) => {
                 }
 
             </TilesTemplate>
+
+            { app.pending && <Loader /> }
 
         </Layout>
     )

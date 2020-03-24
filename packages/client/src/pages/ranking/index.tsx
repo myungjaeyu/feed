@@ -5,7 +5,7 @@ import AppContainer from '@containers/app'
 
 import Layout from '@components/Layout'
 
-import { Rank, ListTemplate } from 'design-system'
+import { Loader, Rank, ListTemplate } from 'design-system'
 
 import Link from '@components/Link'
 
@@ -34,6 +34,8 @@ const Ranking = ({}: IRankProps) => {
                 }
 
             </ListTemplate>
+            
+            { app.pending && <Loader /> }
 
         </Layout>
     )
