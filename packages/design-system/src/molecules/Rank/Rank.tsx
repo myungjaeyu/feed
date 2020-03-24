@@ -59,11 +59,12 @@ const Content = styled.div`
 
 interface IRankProps {
     rank: number,
+    image: string,
     title: string,
     description: string
 }
 
-const Rank = ({ rank, title, description }: IRankProps) => {
+const Rank = ({ rank, image, title, description }: IRankProps) => {
 
     const setRankClassName = rank => [
         { rank: 1, className: 'first' },
@@ -76,7 +77,7 @@ const Rank = ({ rank, title, description }: IRankProps) => {
             <h4 className={ setRankClassName(rank).className }>
                 { rank }
             </h4>
-            <img src='https://usercontents-c.styleshare.kr/images/34571457/original' />
+            <img src={ image } />
             <Content>
 
                 <div>

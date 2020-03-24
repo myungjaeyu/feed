@@ -8,5 +8,5 @@ export default {
 }
 
 export const DefaultRank = () => (
-    <Rank rank={5} title='소녀나라' description='10대, 캐주얼' />
+    <Rank rank={5} image='https://usercontents-c.styleshare.kr/images/34571457/original' title='소녀나라' description='10대, 캐주얼' />
 )
