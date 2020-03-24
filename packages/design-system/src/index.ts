@@ -8,4 +8,6 @@ import TilesTemplate from './templates/TilesTemplate/TilesTemplate'
 import Rank from './molecules/Rank/Rank'
 import ListTemplate from './templates/ListTemplate/ListTemplate'
 
-export { HeaderTitle, HeaderTab, PageTemplate, Tile, TilesTemplate, Rank, ListTemplate }
+import Loader from './atoms/Loader/Loader'
+
+export { HeaderTitle, HeaderTab, PageTemplate, Tile, TilesTemplate, Rank, ListTemplate, Loader }
