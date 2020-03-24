@@ -3,6 +3,8 @@ import { useLocation } from 'react-use'
 
 import { HeaderTitle, HeaderTab, PageTemplate } from 'design-system'
 
+import Link from '@components/Link'
+
 interface ILayoutProps {
     children: any
 }
@@ -19,8 +21,8 @@ const Layout = ({ children }: ILayoutProps) => {
                 HeaderTitle={<HeaderTitle title='오늘 뭐입지?' description='18. 11. 28. 13:00' />}
                 HeaderTab={<HeaderTab 
                     tabs={[
-                        <button key={'1'} className={ attachSelectedClassName(isSelectedTab('/')) }>상품</button>, 
-                        <button key={'2'} className={ attachSelectedClassName(isSelectedTab('/ranking')) }>랭킹</button>
+                        <Link to='/'><button key={'1'} className={ attachSelectedClassName(isSelectedTab('/')) }>상품</button></Link>, 
+                        <Link to='/ranking'><button key={'2'} className={ attachSelectedClassName(isSelectedTab('/ranking')) }>랭킹</button></Link>
                     ]} 
                 />}
             >
