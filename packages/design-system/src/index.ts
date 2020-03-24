@@ -6,5 +6,6 @@ import Tile from './molecules/Tile/Tile'
 import TilesTemplate from './templates/TilesTemplate/TilesTemplate'
 
 import Rank from './molecules/Rank/Rank'
+import ListTemplate from './templates/ListTemplate/ListTemplate'
 
-export { HeaderTitle, HeaderTab, PageTemplate, Tile, TilesTemplate, Rank }
+export { HeaderTitle, HeaderTab, PageTemplate, Tile, TilesTemplate, Rank, ListTemplate }
