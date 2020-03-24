@@ -7,7 +7,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-wrap: wrap;
 
-    figure {
+    a, figure {
         flex-basis: 33%;
     }
 
