@@ -12,6 +12,19 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1.3rem;
+
+    @media (max-width: 600px) {
+
+        h5 {
+            font-size: .9rem;
+        }
+    
+        article button {
+            padding: .5rem;
+        }
+
+    }
+
 `
 
 interface IPageTemplateProps {
