@@ -1,3 +1,152 @@
+# feed
+
+## Usage
+
+```bash
+$ git clone https://github.com/myungjaeyu/feed.git && cd feed
+
+$ yarn install
+
+$ yarn boot
+
+$ yarn start
+
+# client
+# http://localhost:3000
+
+# storybook
+# http://localhost:9009
+```
+
+#### Directory Structure
+
+```bash
+feed/
+│
+├── package.json
+│
+└── packages
+    │
+    │
+    ├── api
+    │   │
+    │   ├── package.json
+    │   │
+    │   └── src
+    │       │
+    │       ├── routes
+    │       │   │
+    │       │   └── api
+    │       │       ├── feed
+    │       │       │   └── index.ts
+    │       │       │
+    │       │       └── index.ts
+    │       │
+    │       └── services
+    │           └── feed.ts
+    │
+    │
+    ├── client
+    │   │
+    │   ├── package.json
+    │   │ 
+    │   └── src
+    │       │
+    │       ├── components
+    │       │   ├── Layout.tsx
+    │       │   └── Link.tsx
+    │       │
+    │       │
+    │       ├── containers
+    │       │   └── app.ts
+    │       │
+    │       │
+    │       ├── hooks
+    │       │   └── useApp.ts
+    │       │
+    │       │
+    │       ├── models
+    │       │   ├── IAppState.ts
+    │       │   │
+    │       │   ├── IProduct.ts
+    │       │   │
+    │       │   └── IRank.ts
+    │       │
+    │       │
+    │       ├── pages
+    │       │   ├── home
+    │       │   │   └── index.tsx
+    │       │   │
+    │       │   └── ranking
+    │       │       └── index.tsx
+    │       │
+    │       ├── router
+    │       │   └── index.tsx
+    │       │
+    │       └── services
+    │           └── feed.ts
+    │
+    │
+    └── design-system
+        │
+        ├── package.json
+        │ 
+        └── src
+            │
+            ├── atoms
+            │   │
+            │   └── Loader
+            │       │
+            │       ├── Loader.stories.tsx
+            │       └── Loader.tsx
+            │
+            │
+            ├── molecules
+            │   │
+            │   ├── HeaderTab
+            │   │   │ 
+            │   │   ├── HeaderTab.stories.tsx
+            │   │   └── HeaderTab.tsx
+            │   │
+            │   ├── HeaderTitle
+            │   │   │
+            │   │   ├── HeaderTitle.stories.tsx
+            │   │   └── HeaderTitle.tsx
+            │   │
+            │   ├── Rank
+            │   │   │
+            │   │   ├── Rank.stories.tsx
+            │   │   └── Rank.tsx
+            │   │
+            │   └── Tile
+            │       │
+            │       ├── Tile.stories.tsx
+            │       └── Tile.tsx
+            │
+            │
+            └── templates
+                │
+                ├── ListTemplate
+                │   │
+                │   ├── ListTemplate.stories.tsx
+                │   └── ListTemplate.tsx
+                │
+                ├── PageTemplate
+                │   │
+                │   ├── PageTemplate.stories.tsx
+                │   └── PageTemplate.tsx
+                │
+                └── TilesTemplate
+                    │
+                    ├── TilesTemplate.stories.tsx
+                    └── TilesTemplate.tsx
+
+
+
+```
+
+<hr />
+
 # service
 > A micro web service monorepo setup using lerna / Front-end toolkit
 
